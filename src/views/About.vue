@@ -4,6 +4,8 @@
       {{arr2}}
       <button @click="concatArray">拼接数组</button>
       <button @click="reverseArray">反转数组</button>
+      <button @click="maxBy">取数组中最大值</button>
+      <button @click="cloneDeep">深拷贝数组</button>
   </div>
 </template>
 
@@ -14,7 +16,9 @@
         data(){
             return{
                 arr1:[1,2,3,4,5,6,7],
-                arr2:[110,120,130]
+                arr2:[110,120,130],
+                arr3:[{'a':1},{'a':2},{'a':3}],
+                arr4:[{name:'a',value:100},{name:'b',value:200}]
             }
         },
         methods:{
@@ -24,7 +28,17 @@
             reverseArray(){
                 let resultArray = _.reverse(this.arr2);
                 console.log(resultArray)
-
+            },
+            maxBy(){
+                let resultArray = _.maxBy(this.arr3,(item)=>{
+                    return item.a
+                })
+                console.log(resultArray)
+            },
+            cloneDeep(){
+                let resultArray = _.cloneDeep(this.arr4)
+                console.log(resultArray)
+                console.log(this.arr4 === resultArray)
             }
         },
         mounted() {
