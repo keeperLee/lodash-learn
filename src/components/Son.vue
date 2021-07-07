@@ -1,5 +1,11 @@
 <template>
-    <button @click="send">sendEmit</button>
+    <div>
+        <div class="normal">
+            <span>李健自传</span>
+        </div>
+        <button @click="send">sendEmit</button>
+    </div>
+
 </template>
 
 <script>
@@ -13,6 +19,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="stylus">
+    .normal
+        span:before
+            content:"<<"
+            color:red
+        span:after
+            content ">>"
+            color:red
 
 </style>
