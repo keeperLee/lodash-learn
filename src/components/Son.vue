@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="normal">
-            <span>李健自传</span>
+            <span>帅哥</span>
         </div>
         <button @click="send">sendEmit</button>
     </div>
@@ -27,5 +27,7 @@ export default {
         span:after
             content ">>"
             color:red
+        &:hover
+            filter brightness(1.3)
 
 </style>
