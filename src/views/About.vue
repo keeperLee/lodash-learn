@@ -49,11 +49,29 @@
                 _.forOwn(FOO,(value,key)=>{
                   console.log(key,value)
                 })
+            },
+            assignTest(){
+              //lodash中的指派方法，将源对象的属性融合进目标对象，若有相同的属性key，则用源对象的替换掉目标对象的
+              let FOO = {
+                a:1
+              }
+              let test1 = {
+                a:'niubi'
+              }
+              let test2 = {
+                b:'shuai'
+              }
+              let test3 = {
+                c:'test3'
+              }
+              let result = _.assign(FOO,test1,test2,test3)
+              console.log(result)
             }
         },
         mounted() {
             // this.concatArray();
-            this.forOwnTest();
+            // this.forOwnTest();
+          this.assignTest();
         }
     }
 </script>
