@@ -39,10 +39,21 @@
                 let resultArray = _.cloneDeep(this.arr4)
                 console.log(resultArray)
                 console.log(this.arr4 === resultArray)
+            },
+            forOwnTest(){
+              //lodash用于遍历对象属性的方法
+                let FOO = {
+                  a:1,
+                  b:2
+                }
+                _.forOwn(FOO,(value,key)=>{
+                  console.log(key,value)
+                })
             }
         },
         mounted() {
             // this.concatArray();
+            this.forOwnTest();
         }
     }
 </script>
